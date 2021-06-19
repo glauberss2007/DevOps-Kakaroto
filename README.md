@@ -31,8 +31,8 @@ VMs UP:
       
       curl https://releases.rancher.com/install-docker/19.03.sh | sh
       
-- (Point you domain to Rancher VM)[https://www.hostgator.com/help/article/wildcard-dns-what-is-it-and-how-do-i-use-it]
-- (Create a wildcard subdomain and poit to kubernets nodes servers)[https://forums.cpanel.net/threads/add-multiple-ips-to-a-record.616963/]
+- [Point you domain to Rancher VM](https://www.hostgator.com/help/article/wildcard-dns-what-is-it-and-how-do-i-use-it)
+- [Create a wildcard subdomain and poit to kubernets nodes servers](https://forums.cpanel.net/threads/add-multiple-ips-to-a-record.616963/)
 
 
 
