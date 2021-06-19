@@ -22,7 +22,7 @@ The final objective is to reach the following scenario:
 - [Add route to send VM traffic to Internet Gateway](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-route.html)
 - [Create the keypair](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 - [Create VMs](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
-- [Add igress rule for SSH port](https://docs.aws.amazon.com/cli/latest/reference/ec2/authorize-security-group-ingress.html)
+- [Add igress external firewall rule for SSH port](https://docs.aws.amazon.com/cli/latest/reference/ec2/authorize-security-group-ingress.html)
 
 VMs UP:
 ![image](https://user-images.githubusercontent.com/22028539/122416938-83805300-cf5f-11eb-9b2e-3b6f4048eba4.png)
