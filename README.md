@@ -13,16 +13,18 @@ The final objective is to reach the following scenario:
 - Linux
 ![image](https://user-images.githubusercontent.com/22028539/122400225-e7038400-cf51-11eb-8d10-c32946503739.png)
 
-- [Install AWS CLI on your computer](curl https://releases.rancher.com/install-docker/19.03.sh | sh)
+- [Install AWS CLI on your computer](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 - [Configure your credential to use AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)
 - [Create Internet Gateway](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-internet-gateway.html)
 - [Create VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html)
 - [Attache IG to VPC](https://docs.aws.amazon.com/cli/latest/reference/ec2/attach-internet-gateway.html)
 - [Create Secure Group](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-security-group.html)
+- [Add route to send VM traffic to Internet Gateway](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-route.html)
 - [Create the keypair](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 - [Create VMs](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+- [Add igress rule for SSH port](https://docs.aws.amazon.com/cli/latest/reference/ec2/authorize-security-group-ingress.html)
 
-With our environemnt up:
+VMs UP:
 ![image](https://user-images.githubusercontent.com/22028539/122416938-83805300-cf5f-11eb-9b2e-3b6f4048eba4.png)
 
 - Install docker on all servers using rancher script: 
