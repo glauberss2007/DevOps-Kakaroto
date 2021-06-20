@@ -137,6 +137,27 @@ Kubectl credential founded in RANCHE>CLUSTER>KUBSCTLCONFIG must be inserted in a
 Now you can use rancher to execute kubectl comands:
 ![image](https://user-images.githubusercontent.com/22028539/122674815-1f52ce80-d1ad-11eb-868c-8be5c388e50b.png)
 
+PS: You can also install LENS on your local machine and configure the cluster using KUBECONFIG file
+![image](https://user-images.githubusercontent.com/22028539/122687108-20a2ec00-d1eb-11eb-878e-a8785096a2e7.png)
+
+## Configure DNS on K8S using TRAEFIK for APP's name and external INGRESS monitoring
+
+Traefik will be instaled on each node in orer to redirect ingress requests to respective services
+
+      $ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/traefik-rbac.yaml
+      $ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/traefik-ds.yaml
+      $ kubectl --namespace=kube-system get pods
+      
+Now lets apply our DNS using with the yml in folder traefik
+      
+      kubectl apply -f ui.yml
+      
+      
+
+
+
+
+
       
       
       
