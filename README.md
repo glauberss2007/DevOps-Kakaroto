@@ -165,6 +165,17 @@ LONGHORN is a storage volume inside cluster that can be instaled using rancher c
 
 RANCHER>APPs>LAUNCHCATALOG>LONGHORN
 
+The storage cluster dashboard:
+![image](https://user-images.githubusercontent.com/22028539/122690559-9cf3fa00-d200-11eb-844e-ac3b17449d7a.png)
+
+Now lets configure the app MYSQL Database on this storage using the yml in database folder of this repo:
+
+      $ kubectl apply -f mariadb-longhorn-volume.yml
+      
+      
+
+
+
 
 
 
