@@ -110,7 +110,6 @@ If using external rancher server, make shure to allow the following ports:
       TCP	2376	Docker daemon TLS port used by Docker Machine
       TCP	6443	Kubernetes API server
 
-
 It will take some minutes to clonclude and them the cluster and nodes will be available in  modern monitoring dashboard:
 
 ![image](https://user-images.githubusercontent.com/22028539/122673123-68068980-d1a5-11eb-95c5-3a093388ff79.png)
@@ -172,8 +171,17 @@ Now lets configure the app MYSQL Database on this storage using the yml in datab
 
       $ kubectl apply -f mariadb-longhorn-volume.yml
       
-      
+Volume created:
+![image](https://user-images.githubusercontent.com/22028539/122691080-b185c180-d203-11eb-8d6f-40cab4ee24ca.png)
 
+MySQL pod:
+![image](https://user-images.githubusercontent.com/22028539/122691086-bd718380-d203-11eb-99cd-06085feb2b97.png)
+
+We can access the pod terminal using RANCHER:
+![image](https://user-images.githubusercontent.com/22028539/122691122-f6a9f380-d203-11eb-8abc-30c978907d5b.png)
+
+PS: You can delete theis pod to confir that it will be automatically recriated with no downtime and the files will persist "/var/lib/mysql"
+     
 
 
 
