@@ -78,7 +78,51 @@ Clean volumes and containers
 
       $ docker rm -f $(docker ps -a -q)
       $ docker volume rm $(docker volume ls)
+      
+Now execute te dokercompose file to setup all the stack incluiding mysql:      
 
-PS: Setup the composer-file and run "up -d" comand to auto do all the steps above
+      $ docker-compose -f docker-compose.yml up -d
+
+To terminate and destroy it use:
+
+      docker-compose down
+      
+## Rancher - Configuring it on a single node
+
+Access the rancher server and run:
+      
+      $ docker run -d --name rancher --restart=unless-stopped -v /opt/rancher:/var/lib/rancher  -p 80:80 -p 443:443 rancher/rancher:v2.4.3
+      
+PS: ADD DNS IP target for rancher
+         
+## Kubernets - Create cluster, configure kubectl and lens to manage it
+      
+Access the rancher url and go to "CLUSTER > ADD CLUSTER > CUSTOM" and change the "name" and disbale teh NGINX ingress (we gona configura TRAEFIK latter)
+
+Get the generated code and run ti on VMs nodes (change node-name parameter):
+                  
+                  sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://rancher.glaubersoares.com --token 52znnh6vhgqgpm9fplr5gnm57gb6pgtw69dwfm7spgr8twvsnwpp2s --ca-checksum 5dc264f29535156acbc9b3ca6998c48d6338e8f571b9aa792ab294ee5b635adb --node-name k8s-1 --etcd --controlplane --worker
+
+If using external rancher server, make shure to allow the following ports:
+
+      TCP	22	SSH provisioning of nodes using Node Driver
+      TCP	443	Rancher catalog
+      TCP	2376	Docker daemon TLS port used by Docker Machine
+      TCP	6443	Kubernetes API server
+
+
+It will take some minutes to clonclude and them the cluster and nodes will be available in  modern monitoring dashboard:
+
+![image](https://user-images.githubusercontent.com/22028539/122673123-68068980-d1a5-11eb-95c5-3a093388ff79.png)
+![image](https://user-images.githubusercontent.com/22028539/122673128-718ff180-d1a5-11eb-934a-2a92f361b356.png)
+
+PS: Many activities can be performed using rancher.
+
+
+
+      
+      
+      
+      
       
       
