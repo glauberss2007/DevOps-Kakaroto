@@ -119,6 +119,23 @@ It will take some minutes to clonclude and them the cluster and nodes will be av
 PS: Many activities can be performed using rancher.
 
 
+## Install KUBECTL and configure it to be used by RANCHER
+
+Access rancher server and install kubectl:
+
+      $ sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+      $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+      $ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+      $ sudo apt-get update
+      $ sudo apt-get install -y kubectl
+
+Kubectl credential founded in RANCHE>CLUSTER>KUBSCTLCONFIG must be inserted in a config file:
+      
+      $ nano ~/.kube/config
+      $ kubectl get nodes
+      
+Now you can use rancher to execute kubectl comands:
+![image](https://user-images.githubusercontent.com/22028539/122674815-1f52ce80-d1ad-11eb-868c-8be5c388e50b.png)
 
       
       
