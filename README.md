@@ -184,6 +184,27 @@ PS: You can delete this pod to confir that it will be automatically recriated wi
      
 ## Configuring GRAYLOGS to a more efficient log control proccess using FLUENTD
 
+      $ kubectl apply -f graylog.yml
+      
+Graylog is now UP:
+![image](https://user-images.githubusercontent.com/22028539/122691692-a9c81c00-d207-11eb-8d29-b71efaa182e8.png)
+
+User: admin
+password: admin
+
+
+Graylog log inputs config:
+
+1. SYSTEM>INPUTS>NEW GELF UPD
+2. MANAGE EXTRACTOR>ADD EXTRACTOR> TYPE KUBERNETS > FILE TYPE JSON > SET KEY PREFIX> SET EXTRACTOR TITLE
+3. SEARCH
+
+Now we have the LOGs available in a central place
+![image](https://user-images.githubusercontent.com/22028539/122692005-0aa42400-d209-11eb-8d73-6587c59c7c06.png)
+
+
+## Monitoring system with PROMETHEUS and GRAFANA
+
 
 
 
