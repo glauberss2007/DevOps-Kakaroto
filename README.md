@@ -161,7 +161,11 @@ And also check traffic on dashboard
 
 ## Configuring external Volumes (DB) for ou dockered apps with LONGHORN
 
-LONGHORN is a storage volume inside cluster
+LONGHORN is a storage volume inside cluster that can be instaled using rancher catalog or helm.
+
+RANCHER>APPs>LAUNCHCATALOG>LONGHORN
+
+
 
 
       
