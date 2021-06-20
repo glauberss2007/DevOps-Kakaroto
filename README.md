@@ -180,8 +180,11 @@ MySQL pod:
 We can access the pod terminal using RANCHER:
 ![image](https://user-images.githubusercontent.com/22028539/122691122-f6a9f380-d203-11eb-8abc-30c978907d5b.png)
 
-PS: You can delete theis pod to confir that it will be automatically recriated with no downtime and the files will persist "/var/lib/mysql"
+PS: You can delete this pod to confir that it will be automatically recriated with no downtime and the files will persist "/var/lib/mysql"
      
+## Configuring GRAYLOGS to a more efficient log control proccess using FLUENTD
+
+
 
 
 
