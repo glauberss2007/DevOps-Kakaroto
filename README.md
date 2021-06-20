@@ -34,5 +34,21 @@ VMs UP:
 - [Point you domain to Rancher VM](https://www.hostgator.com/help/article/wildcard-dns-what-is-it-and-how-do-i-use-it)
 - [Create a wildcard subdomain and poit to kubernets nodes servers](https://forums.cpanel.net/threads/add-multiple-ips-to-a-record.616963/)
 
+## Buils APP using docker-compose, REDIS, NODE and NGINX
+
+Access the server (can be rancher one) and install git, python, pip and docker-compose:
+
+      $ sudo su
+      $ apt-get install git -y
+      $ curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      $ chmod +x /usr/local/bin/docker-compose
+      $ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+Get codes from git repository to start our app container build process:
+      
+      $ cd /home/ubuntu
+      $ git clone https://github.com/glauberss2007/DevOps
+      $ cd devops/app
+
 
 
