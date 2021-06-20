@@ -159,7 +159,9 @@ And also check traffic on dashboard
 ![image](https://user-images.githubusercontent.com/22028539/122688567-6a8fd000-d1f3-11eb-8921-231f2a78ffba.png)
 ![image](https://user-images.githubusercontent.com/22028539/122688574-767b9200-d1f3-11eb-86fb-125ed5cd438f.png)
 
-## Configuring external Volumes (DB) for ou dockered apps
+## Configuring external Volumes (DB) for ou dockered apps with LONGHORN
+
+LONGHORN is a storage volume inside cluster
 
 
       
