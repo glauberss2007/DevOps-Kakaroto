@@ -152,6 +152,17 @@ Now lets apply our DNS using with the yml in folder traefik
       
       kubectl apply -f ui.yml
       
+In rancher we can access ou LOAD BALANCE
+![image](https://user-images.githubusercontent.com/22028539/122688538-31576000-d1f3-11eb-8604-1423f3f837fa.png)
+
+And also check traffic on dashboard
+![image](https://user-images.githubusercontent.com/22028539/122688567-6a8fd000-d1f3-11eb-8921-231f2a78ffba.png)
+![image](https://user-images.githubusercontent.com/22028539/122688574-767b9200-d1f3-11eb-86fb-125ed5cd438f.png)
+
+## Configuring external Volumes (DB) for ou dockered apps
+
+
+      
       
 
 
