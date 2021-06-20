@@ -50,5 +50,35 @@ Get codes from git repository to start our app container build process:
       $ git clone https://github.com/glauberss2007/DevOps
       $ cd devops/app
 
+[App filed including dockerfiles can be accessed here](https://github.com/glauberss2007/DevOps/blob/main/app)
 
+Build and start of REDIs on port 6379
+      
+      $ docker build -t glauberss2007/redis:devops .
+      $ docker run -d --name redis -p 6379:6379 glauberss2007/redis:devops
+      $ docker ps
+      $ docker logs redis
+           
+Build, link to REDIS and start NODE that will be available on /redis
+      
+      $ cd ../node
+      $ docker build -t glauberss2007/node:devops .
+      $ docker run -d --name node -p 8080:8080 --link redis glauberss2007/node:devops
+      $ docker ps 
+      $ docker logs node
 
+Build, link to NODE and start of NGINX making APP available over PORT 80 and 8080
+
+      $ cd ../nginx
+      $ docker build -t glauberss2007/nginx:devops .
+      $ docker run -d --name nginx -p 80:80 --link node glauberss2007/nginx:devops
+      $ docker ps
+
+Clean volumes and containers
+
+      $ docker rm -f $(docker ps -a -q)
+      $ docker volume rm $(docker volume ls)
+
+PS: Setup the composer-file and run "up -d" comand to auto do all the steps above
+      
+      
