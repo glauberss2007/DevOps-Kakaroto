@@ -337,4 +337,7 @@ Get nodes name:
 
 ## Pipeline for an automatic deployment using Jenkins, Rancher and git repository (github, bitbucket, gitlab, etc)
 
+For this pilpeline we wil use a GoLAng APP that is in another one of my reppository
+
+
       
