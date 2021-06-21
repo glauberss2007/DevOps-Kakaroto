@@ -269,9 +269,19 @@ When the app fail for a while, the container is autmatically restarted:
 
 PS: This is an important step that automats the infrastructure
 
+## ROLLING UPDATE or SET IMAGES with NODOWNTIME
+
+We gonna deploy and aplication and them update it for further versions without downtime
+
+      $ kubectl apply -f rolling-update.yml
       
+Now lets update it
 
+      $ kubectl set image deployments/my-nginx nginx=nginx:1.9.1
 
+And check new pods
+      
+      $ kubectl get pods -l app=nginx -L deployment
 
 
 
