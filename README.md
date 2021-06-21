@@ -205,8 +205,10 @@ Now we have the LOGs available in a central place
 
 ## Monitoring system with PROMETHEUS and GRAFANA
 
+RANCHER>CLUSTER>TOOLS>MONITORING>ENABLED
 
 
+## Seting routines with CRON job schedule
 
 
 
