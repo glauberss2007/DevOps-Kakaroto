@@ -335,9 +335,11 @@ Get nodes name:
       # remover o Label do node
       $ kubectl label nodes k8s-1 disktype-
 
-## Pipeline for an automatic deployment using Jenkins, Rancher and git repository (github, bitbucket, gitlab, etc)
+## Creating a PIPELINE for an automatic deployment using JENKINS, Rancher and GIT repository (github, bitbucket, gitlab, etc)
 
-For this pilpeline we wil use a GoLAng APP that is in another one of my reppository
+For this pilpeline we wil use a GoLAng APP that is in another one of my reppository in github plataform.
+
+
 
 
       
