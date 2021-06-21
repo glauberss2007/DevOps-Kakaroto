@@ -255,7 +255,9 @@ Insert base values on secrets.yml and then apply it
       
 The secrets can be founded in RANCHER>SECRETS (or ENVC in POD) and only ADMIN can see the values
 
-PS: CONFIGMAPS are used for parameters and SECRETS to sensitive data
+PS: CONFIGMAPS are used for parameters and SECRETS to sensitive data, developers only will known the variables.
+
+
 
 
 
