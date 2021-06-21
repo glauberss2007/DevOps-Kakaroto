@@ -288,6 +288,28 @@ POD updating:
 ![image](https://user-images.githubusercontent.com/22028539/122797530-f0fcee00-d295-11eb-81ba-49d72e7d142d.png)
 ![image](https://user-images.githubusercontent.com/22028539/122797736-2dc8e500-d296-11eb-9ad8-74b9b7d76050.png)
 
+## PODs AUTOSCALING set
 
+Let's run the the POD
 
+      $ kubectl apply -f php-apache.yml
 
+Create horizontal autoscaled POD
+
+      $ kubectl apply -f hpa.yml
+      
+Get autosscaled pod:
+
+      $ kubectl get hpa
+
+Lets stress the aplication with a load generator
+      
+      $ kubectl run -i --tty load-generator --image=busybox /bin/sh
+      $ while true; do wget -q -O- http://php-apache.default.svc.cluster.local; done
+      
+Confirm scaling pods using RANCHER panel and terminal
+
+      $ kubectl get hpa
+      $ kubectl get deployment php-apache
+      
+      
