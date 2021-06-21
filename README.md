@@ -235,6 +235,10 @@ The logs and execution history will be available in rancher.
 
       $ kubectl apply -f configmap.yml
       
+The CONFIGs can be founded in RANCHER>RESOURCE>CONFIG
+![image](https://user-images.githubusercontent.com/22028539/122775389-7675a380-d280-11eb-8fbb-3a7685de8174.png)
+
+PS: The idea of CONFIGMAP is to keep out of container the configurations "IP" and etc. Re-build or eceate containers is only necessary for aplication code change (aplicationv ersion).
       
 
 
