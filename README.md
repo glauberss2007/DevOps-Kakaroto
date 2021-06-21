@@ -240,18 +240,26 @@ The CONFIGs can be founded in RANCHER>RESOURCE>CONFIG
 
 PS: The idea of CONFIGMAP is to keep out of container the configurations "IP" and etc. Re-build or eceate containers is only necessary for aplication code change (aplicationv ersion).
       
+## Using SECRETS to protect sensitive data used by project
 
+The secrets are encrypted insede the RANCHER
 
-
+Create a secrets example:
       
+      $ echo -n "glauber" | base64
+      $ echo -n "123456" | base64
+      
+Insert base values on secrets.yml and then apply it
+
+      $ kubectl apply -f secrets.yml
+      
+The secrets can be founded in RANCHER>SECRETS (or ENVC in POD) and only ADMIN can see the values
+
+PS: CONFIGMAPS are used for parameters and SECRETS to sensitive data
 
 
 
 
 
-      
-      
-      
-      
-      
-      
+
+
