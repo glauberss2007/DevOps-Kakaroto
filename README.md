@@ -362,6 +362,8 @@ Simulate a commit and push to check:
 
 Change the code to see pipeline runing:
 
+![image](https://user-images.githubusercontent.com/22028539/122822101-0719a700-d2b4-11eb-8272-abf51020c0bf.png)
+
 
 The Jenkin is runing and monitored by rancher:
 
@@ -369,7 +371,84 @@ The Jenkin is runing and monitored by rancher:
 
 P: The stages are defined in rancher-pipeline.yml
 
-## Kubeless
+## Using Kubeless to run FUNCTIONS inside K8S (Similary to AWS lambda)
+
+The benefit of this scenario is taht there is no VM or Container APP waiting for a request. When the function is requested a TRIGER execute the function only. There is CODE only, no VMs or CONTAINERS.
+
+More information: https://kubeless.io
+
+Instaling kubeless
+
+      $ export RELEASE=$(curl -s https://api.github.com/repos/kubeless/kubeless/releases/latest | grep tag_name | cut -d '"' -f 4)
+      $ kubectl create ns kubeless
+      $ kubectl create -f https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless-$RELEASE.yaml
+      
+      $ kubectl get pods -n kubeless
+      
+      $ kubectl get deployment -n kubeless
+
+      $ kubectl get customresourcedefinition
+      
+Installing kubeless CLI
+
+      $ export OS=$(uname -s| tr '[:upper:]' '[:lower:]')
+      $ apt install unzip
+
+      $ cd /home/ubuntu
+      $ curl -OL https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless_$OS-amd64.zip && unzip kubeless_$OS-amd64.zip && sudo mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
+      
+      $ kubeless function ls
+      
+Function call example on a test.py
+
+      $ kubeless function deploy hello --runtime python2.7 --from-file test.py --handler test.hello
+      $ kubectl get functions
+      $ kubeless function ls
+
+Call function
+
+      $ kubeless function call hello --data 'Hello world!'
+      
+Apply function
+
+      $ kubectl apply -f function-nodejs.yml
+      
+To use the GUI for KUBELESS
+
+      kubectl create -f https://raw.githubusercontent.com/kubeless/kubeless-ui/master/k8s.yaml
+      
+      
+## Using HELM as the package manager fo K8S
+
+Installing and configuring it
+
+      $ curl -LO https://git.io/get_helm.sh
+      $ chmod 700 get_helm.sh
+      $ ./get_helm.sh
+      $ helm init
+      $ helm init --upgrade
+
+      $ kubectl create serviceaccount --namespace kube-system tiller
+      $ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+      $ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+
+      $ helm search
+
+      $ helm repo update
+
+      $ helm install stable/redis
+      
+PS: RANCHE aplication CATALOG is based on HELM REPO
+
+
+TIPS for a container startegy enterprise
+
+      
+      
+      
+      
+       
+
 
 
 
