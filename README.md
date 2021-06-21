@@ -312,4 +312,28 @@ Confirm scaling pods using RANCHER panel and terminal
       $ kubectl get hpa
       $ kubectl get deployment php-apache
       
+The number of pods for thata service automaticaly increase or decrease according to demands:
       
+## Using SCHEDULING to set labels and nodes that will run labeled containers      
+
+It can be used in scenarios in wich some NODES has caracteristis to run specifics services, for example high memory for databases...
+
+Using schelude we can specifies the category of nodes thata will run sme containers
+
+Example:
+1. cpu labe for high cpu nodes
+2. ssd label for DBs
+3. gph label for graphic use
+
+
+Get nodes name:
+
+      $ kubectl get nodes
+      $ kubectl label nodes <your-node-name> disktype=ssd
+
+      $ kubectl apply -f node-selector.yml
+
+      # remover o Label do node
+      $ kubectl label nodes k8s-1 disktype-
+
+
