@@ -225,12 +225,20 @@ Watch job status in a real time:
       
       $ kubectl  get jobs --watch
       
-The logs and execution history will be available in rancher.
-
-
-
-
+![image](https://user-images.githubusercontent.com/22028539/122773171-7d031b80-d27e-11eb-89ae-617810ad53f3.png)
       
+The logs and execution history will be available in rancher.
+![image](https://user-images.githubusercontent.com/22028539/122772864-2f86ae80-d27e-11eb-8a85-6e2092db33a7.png)
+![image](https://user-images.githubusercontent.com/22028539/122772835-285fa080-d27e-11eb-82f8-9967f677e4b5.png)
+
+## Decouple K8S configurations and variables using CONFIGMAPs
+
+      $ kubectl apply -f configmap.yml
+      
+      
+
+
+
       
 
 
