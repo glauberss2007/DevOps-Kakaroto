@@ -258,7 +258,11 @@ The secrets can be founded in RANCHER>SECRETS (or ENVC in POD) and only ADMIN ca
 PS: CONFIGMAPS are used for parameters and SECRETS to sensitive data, developers only will known the variables.
 
 
+## Using LIVENESS on APLICATIONS to keep it healthy
 
+The container that we gona create has an application that periodic becomes offline.
+
+      
 
 
 
