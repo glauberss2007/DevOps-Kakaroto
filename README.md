@@ -339,6 +339,31 @@ Get nodes name:
 
 For this pilpeline we wil use a GoLAng APP that is in another one of my reppository in github plataform.
 
+The application needs a DOCKERFILE and DEPLOYMENT.yml as you can see the example in https://github.com/glauberss2007/CS-GoGoGoLang
+
+1. Take a look on the APP structure and change deplyment URL on yml insid APP repo
+2. Check the rancher pipeline file that will be used by the jenkins that runs inside rancher
+
+Enable rancher pipeline: RANCHER>CLUSTER>TOOL>PIPELINES
+
+![image](https://user-images.githubusercontent.com/22028539/122811330-b9e30880-d2a6-11eb-8343-7cce9a269de4.png)
+
+Allowing RANCHER to monitor your GIT
+![image](https://user-images.githubusercontent.com/22028539/122812196-c156e180-d2a7-11eb-93f0-c4ca99bd3ca7.png)
+
+Enable teh REPO to be Monitored:
+![image](https://user-images.githubusercontent.com/22028539/122812577-39250c00-d2a8-11eb-9d40-bae816a9dbf8.png)
+
+The PIPELINE is available in RANCHER>RESOURCES>PIPELINE
+![image](https://user-images.githubusercontent.com/22028539/122812798-85704c00-d2a8-11eb-8e0e-bf5c7e01e7c0.png)
+
+Simulate a commit and push to check
+
+Change the code to see pipeline runing:
+
+
+
+
 
 
 
