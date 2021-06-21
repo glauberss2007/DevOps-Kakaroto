@@ -260,7 +260,14 @@ PS: CONFIGMAPS are used for parameters and SECRETS to sensitive data, developers
 
 ## Using LIVENESS on APLICATIONS to keep it healthy
 
-The container that we gona create has an application that periodic becomes offline.
+The container that we gonna create has an application that periodic becomes offline.
+
+      $ kubectl apply -f secrets.yml
+
+When the app fail for a while, the container is autmatically restarted:
+![image](https://user-images.githubusercontent.com/22028539/122794932-2b18c080-d293-11eb-98ce-6687a2aeb4c4.png)
+
+PS: This is an important step that automats the infrastructure
 
       
 
