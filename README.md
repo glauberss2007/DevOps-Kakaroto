@@ -284,6 +284,7 @@ And check new pods
       $ kubectl get pods -l app=nginx -L deployment
 
 POD updating:
+
 ![image](https://user-images.githubusercontent.com/22028539/122797530-f0fcee00-d295-11eb-81ba-49d72e7d142d.png)
 ![image](https://user-images.githubusercontent.com/22028539/122797736-2dc8e500-d296-11eb-9ad8-74b9b7d76050.png)
 
