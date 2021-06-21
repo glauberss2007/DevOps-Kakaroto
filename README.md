@@ -209,7 +209,7 @@ RANCHER>CLUSTER>TOOLS>MONITORING>ENABLED
 
 Now we have our grafana monitoring up
 ![image](https://user-images.githubusercontent.com/22028539/122693307-a9338380-d20f-11eb-9adb-163e9c692bfd.png)
-
+![image](https://user-images.githubusercontent.com/22028539/122693339-d1bb7d80-d20f-11eb-98c2-81be91582851.png)
 
 ## Seting routines with CRON job schedule
 
