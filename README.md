@@ -357,11 +357,18 @@ Enable teh REPO to be Monitored:
 The PIPELINE is available in RANCHER>RESOURCES>PIPELINE
 ![image](https://user-images.githubusercontent.com/22028539/122812798-85704c00-d2a8-11eb-8e0e-bf5c7e01e7c0.png)
 
-Simulate a commit and push to check
+Simulate a commit and push to check:
+![image](https://user-images.githubusercontent.com/22028539/122815578-04b34f00-d2ac-11eb-9212-aeaf57f07071.png)
 
 Change the code to see pipeline runing:
 
 
+The Jenkin is runing and monitored by rancher:
+
+![image](https://user-images.githubusercontent.com/22028539/122815109-6b843880-d2ab-11eb-9644-fdc5f6e43783.png)
+
+
+## Kubeless
 
 
 
