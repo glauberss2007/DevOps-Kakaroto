@@ -321,10 +321,9 @@ It can be used in scenarios in wich some NODES has caracteristis to run specific
 Using schelude we can specifies the category of nodes thata will run sme containers
 
 Example:
-1. cpu labe for high cpu nodes
+1. gpu label for graphic use and machine learning
 2. ssd label for DBs
-3. gph label for graphic use
-
+3. High networking for image file transfering
 
 Get nodes name:
 
@@ -336,4 +335,6 @@ Get nodes name:
       # remover o Label do node
       $ kubectl label nodes k8s-1 disktype-
 
+## Pipeline for an automatic deployment using Jenkins, Rancher and git repository (github, bitbucket, gitlab, etc)
 
+      
