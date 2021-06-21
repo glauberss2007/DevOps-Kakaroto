@@ -207,6 +207,9 @@ Now we have the LOGs available in a central place
 
 RANCHER>CLUSTER>TOOLS>MONITORING>ENABLED
 
+Now we have our grafana monitoring up
+![image](https://user-images.githubusercontent.com/22028539/122693307-a9338380-d20f-11eb-9adb-163e9c692bfd.png)
+
 
 ## Seting routines with CRON job schedule
 
