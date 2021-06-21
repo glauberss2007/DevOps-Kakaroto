@@ -367,6 +367,7 @@ The Jenkin is runing and monitored by rancher:
 
 ![image](https://user-images.githubusercontent.com/22028539/122815109-6b843880-d2ab-11eb-9644-fdc5f6e43783.png)
 
+P: The stages are defined in rancher-pipeline.yml
 
 ## Kubeless
 
