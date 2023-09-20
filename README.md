@@ -1,5 +1,5 @@
 # DevOps
-Step by Step DevOps environment with Rancher, AKS, Docker, Harbor, LongThorn, Jenkins, GrayLog, Grafana and others. 
+Step by Step DevOps environment with Rancher, K8S, Docker, Harbor, LongThorn, GrayLog, Grafana and others. 
 The objective of this repository is to become a template for use in diferent other projects.
 
 The limitations are that in this project we use only Amazon provider. Sometimes a multicloud project is better due the diferent benefits of diferents providers (OCI fos DBs, Azure for MS products as AD, AWS for specifics services and GCP for others). In a multicloud environmet it is necessary a cybersecuriting known and a DevSecOps rule.
